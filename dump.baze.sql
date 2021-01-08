@@ -148,7 +148,7 @@ CREATE TABLE `korisnik` (
   PRIMARY KEY (`idKorisnik`,`Uloga_idUloga`),
   KEY `fk_Korisnik_Uloga_idx` (`Uloga_idUloga`),
   CONSTRAINT `fk_Korisnik_Uloga` FOREIGN KEY (`Uloga_idUloga`) REFERENCES `uloga` (`idUloga`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +157,7 @@ CREATE TABLE `korisnik` (
 
 LOCK TABLES `korisnik` WRITE;
 /*!40000 ALTER TABLE `korisnik` DISABLE KEYS */;
-INSERT INTO `korisnik` VALUES (1,'lexa','asdf123','Aleksa','Novkovic','bul. despota Stefana 5a',75,1),(2,'ivanaCar','asdf123','Ivana','Milutinovic','bul. despota Stefana 5a',90,1),(3,'radnik1','radnik1','Mile','Milovanovic','Somborska 3',NULL,2),(5,'lakica','lakica','Lana','Slovic','Prijepoljska 2',90,1),(6,'kuzmo','kuzmOo321','Zoran','Kuzmanovic','Zvornicka 51',100,1),(7,'maki11','Maki123','Marija','Milutinovic','Banjska 12',100,1);
+INSERT INTO `korisnik` VALUES (1,'lexa','asdf123','Aleksa','Novkovic','bul. despota Stefana 5a',75,1),(2,'ivanaCar','asdf123','Ivana','Milutinovic','bul. despota Stefana 5a',90,1),(3,'radnik1','radnik1','Mile','Milovanovic','Somborska 3',NULL,2),(5,'lakica','lakica','Lana','Slovic','Prijepoljska 2',90,1),(6,'kuzmo','kuzmOo321','Zoran','Kuzmanovic','Zvornicka 51',100,1),(7,'maki11','Maki123','Marija','Milutinovic','Banjska 12',100,1),(8,'radnik2','radnik2','Jovana','Jovic','Prizrenska 35a',NULL,2);
 /*!40000 ALTER TABLE `korisnik` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -253,4 +253,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-06 19:40:03
+-- Dump completed on 2021-01-08 16:40:42

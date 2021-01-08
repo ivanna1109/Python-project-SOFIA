@@ -49,7 +49,7 @@ def izabrana_opcija(o):
         return
 
 def prikaz_svih_korisnika():
-    print("Lista svih registrovanih korisnika: ");
+    print("Lista svih registrovanih korisnika: ")
     korisnici = crud.lista_korisnika()
     if korisnici:
         for k in korisnici:
@@ -75,15 +75,14 @@ def prikaz_izdatih_knjiga():
     plt.yticks(arange(0, max(y)+1, 1.0))
     
     plt.pause(15)
-    meni(korisnik)
-    # plt.show()          
+    meni(korisnik)         
     
-def make_autopct(values):
-    def my_autopct(pct):
-        total = sum(values)
-        val = int(round(pct*total/100.0))
-        return '{p:.1f}%({v:d})'.format(p=pct,v=val)
-    return my_autopct
+def napravi_autopct(vrednosti):
+    def moj_autopct(pct):
+        ukupno = sum(vrednosti)
+        vrednost = int(round(pct*ukupno/100.0))
+        return '{p:.1f}%({v:d})'.format(p=pct,v=vrednost)
+    return moj_autopct
     
 def prikaz_najomiljenijih_knjiga():
     global korisnik
@@ -98,7 +97,6 @@ def prikaz_najomiljenijih_knjiga():
     for k in sortirani:
         sortirani_recnik[k] = recnik[k]
     
-    print(sortirani_recnik)
     nazivi_knjiga = []
     for k in sortirani_recnik:
         pom = crud.nadji_knjigu(k)
@@ -108,7 +106,7 @@ def prikaz_najomiljenijih_knjiga():
     y = list(sortirani_recnik.values()) 
     
     fig1, ax1 = plt.subplots()
-    ax1.pie(y, labels = x, autopct=make_autopct(y))
+    ax1.pie(y, labels = x, autopct=napravi_autopct(y))
     
     plt.pause(15)
     meni(korisnik)
@@ -188,7 +186,7 @@ def azuriranje(k, idKat, brisanje_admin, azuriranje_admin):
         crud.azuriranje_cene(k[0], cena)
     elif opcija == 4:
         meni(korisnik)
-        return;
+        return
     else:
         print("\nUnesite jednu od ponuđenih opcija!\n")
         prikaz_knjige(k, idKat, brisanje_admin, azuriranje_admin)
@@ -226,7 +224,7 @@ def dodavanje_knjige():
     nova_knjiga['poeni'] = eval(input("Unesite vrednost poena za izdavanje: "))
     nova_knjiga['primerci'] = eval(input("Unesite broj primeraka: "))
     nova_knjiga['opis'] = input("Unesite kratak opis: ")
-    nova_knjiga['cena'] = eval(input("Unesite cenu knjige: "));
+    nova_knjiga['cena'] = eval(input("Unesite cenu knjige: "))
     kategorije = crud.sve_kategorije()
     okej = False
     kategorija = None

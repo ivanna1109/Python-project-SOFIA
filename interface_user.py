@@ -73,7 +73,7 @@ def prikaz_knjige(k, idKat, iznajmljivanje, narucivanje):
             print("\nUnesite jednu od ponuđenih opcija!")
             print("\n{}".format("-"*47))
             prikaz_knjige(k,idKat, iznajmljivanje, narucivanje)
-            return;
+            return
 
 def iznajmi(k):
     global korisnik

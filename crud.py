@@ -1,7 +1,7 @@
 import mysql.connector
 import datetime as dt
 
-db = mysql.connector.connect(host='localhost',user='root',password='ivanna1109', database='pythondb')
+db = mysql.connector.connect(host='localhost',user='root', password='ivanna1109', database='pythondb')
 
 kursor = db.cursor()
 
