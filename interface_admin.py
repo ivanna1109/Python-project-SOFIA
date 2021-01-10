@@ -25,7 +25,7 @@ def meni(trenutni_korisnik):
     print("-"*47)
     opc = eval(input("Unesite željenu opciju ---> "))
     print("\n{}".format("-"*47))
-    izabrana_opcija(opc)
+    izabrana_opcija(opc) 
     
 
 def izabrana_opcija(o):

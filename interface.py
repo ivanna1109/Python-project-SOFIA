@@ -21,7 +21,7 @@ def pocetni_meni():
         gf.zavrsi_program()
     else:
         print("\nUnesite jednu od ponuđenih opcija!!!\n")
-        pocetni_meni()
+        pocetni_meni() 
         
 def dobrodoslica():
     print("="*47)

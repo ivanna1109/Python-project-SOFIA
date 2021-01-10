@@ -4,7 +4,7 @@ import globalne_funkc as gf
 korisnik = None
 
 iznajmljivanjeGlobal = False
-narucivanjeGlobal = False
+narucivanjeGlobal = False 
 
 def meni(trenutni_korisnik):
     global korisnik

@@ -78,7 +78,7 @@ def naruci_knjigu(idK, idKnjige, primerci, cena):
     kursor.execute('insert into Narudzbenica (Korisnik_idKorisnik, Knjiga_idKnjiga, datum, cena) values (%s, %s, %s, %s)', vrednosti)
     vrednosti = (primerci-1, idKnjige)
     kursor.execute('update Knjiga set broj_primeraka = %s where idKnjiga = %s', vrednosti)
-    db.commit()
+    db.commit() 
     
 #crud operacije za radnika
 def lista_korisnika():
