@@ -234,7 +234,9 @@ def dodavanje_knjige():
         for k in kategorije:
             print("{}) {}".format(i, k[1]))
             i+=1
+        print("-"*47)
         kat = eval(input("Izaberite kategoriju kojoj knjiga pripada---> "))
+        print("\n{}".format("-"*47))
         try:
             kategorija = kategorije[kat-1]
             okej = True
@@ -242,9 +244,13 @@ def dodavanje_knjige():
             print("Izaberite jednu od ponuđenih kategorija!")
             
     if crud.dodavanje_nove_knjige(nova_knjiga, kategorija[0]):
+        print("\n{}".format("-"*47))
         print("Uspešno ste dodali novu knjigu!")
+        print("\n{}".format("-"*47))
     else:
+        print("\n{}".format("-"*47))
         print("Knjiga već postoji u bazi podataka!\nOtkazuje se dodavanje.")
+        print("\n{}".format("-"*47))
     meni(korisnik)
        
     
