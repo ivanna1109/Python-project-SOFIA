@@ -11,7 +11,7 @@ narucivanjeGlobal = False
 brisanjeGlobal = False
 azuriranjeGlobal = False
 
-korisnik = None
+korisnik = None 
 
 def inicijalno(k):
     global korisnik
